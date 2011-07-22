@@ -14,6 +14,14 @@ module Moqueue
     def received_ack?
       @received_ack || false
     end
+
+    def reject
+      @received_reject = true
+    end
+    
+    def received_reject?
+      @received_reject || false
+    end
         
     def properties
       @properties
