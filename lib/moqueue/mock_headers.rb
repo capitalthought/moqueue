@@ -7,7 +7,7 @@ module Moqueue
       @properties = properties
     end
     
-    def ack
+    def ack multiple=false
       @received_ack = true
     end
     
@@ -15,7 +15,7 @@ module Moqueue
       @received_ack || false
     end
 
-    def reject
+    def reject opts = {}
       @received_reject = true
     end
     
